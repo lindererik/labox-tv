@@ -1,6 +1,6 @@
 {
   "name": "labox-tv",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Control and get informations from Labox TV (Numericable)",
   "main": "index.js",
   "dependencies": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RemyJeancolas/labox-tv.git"
+    "url": "git+https://github.com/lindererik/labox-tv.git"
   },
   "keywords": [
     "labox",
@@ -22,7 +22,7 @@
   "author": "Rémy Jeancolas <remy.jeancolas@illogeek.eu>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RemyJeancolas/labox-tv/issues"
+    "url": "https://github.com/lindererik/labox-tv/issues"
   },
-  "homepage": "https://github.com/RemyJeancolas/labox-tv#readme"
+  "homepage": "https://github.com/lindererik/labox-tv#readme"
 }
