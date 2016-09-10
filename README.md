@@ -13,18 +13,19 @@ npm install labox-tv
 ### Initialization
 Replace `*.*.*.*` with IP adress of labox tv in the line below, if you don't know which ip address to use, you can try *websocket.labox* instead of IP address.
 ```js
-var labox = require('labox-tv')('*.*.*.*'); 
+var labox = require('labox-tv')('*.*.*.*');
 ```
 
 If you have problems or nothing seems to work, you can start the module in debug mode by adding `true` in the second parameter, in this mode every action or error will be logged to console.
+the third parameter is used to control the log verbosity (default is 0), the value must be numeric
 ```js
-var labox = require('labox-tv')('*.*.*.*', true); 
+var labox = require('labox-tv')('*.*.*.*', true, 5);
 ```
 
 ### Events
 
 #### Events list
-The module exposes several events in order to have information available in real time : 
+The module exposes several events in order to have information available in real time :
 
 * **open** : Triggered when the module successfully connects to Labox, empty data
 * **close** : Triggered when the connection to Labox is lost, empty data
@@ -56,11 +57,11 @@ The module exposes several events in order to have information available in real
     }
   }
   ```
- 
+
 #### Example
 ```js
 // We load the module
-var labox = require('labox-tv')('*.*.*.*'); 
+var labox = require('labox-tv')('*.*.*.*');
 
 // We listen for "volume" events :
 labox.on('volume', function(data) {
@@ -80,7 +81,7 @@ This method takes the button's ID to send. For example to increase volume :
 
 ```js
 // We load the module
-var labox = require('labox-tv')('*.*.*.*'); 
+var labox = require('labox-tv')('*.*.*.*');
 
 // We wait for connection to be open and increase volume
 labox.on('open', function() {
@@ -89,4 +90,4 @@ labox.on('open', function() {
 ```
 
 This method does not return data, once the action button will be taken into account by Labox, you will receive a corresponding event.
-All available supported button IDs can be found in the file [Constants.js](https://github.com/RemyJeancolas/labox-tv/blob/master/lib/Constants.js).
+All available supported button IDs can be found in the file [Constants.js](https://github.com/lindererik/labox-tv/blob/master/lib/Constants.js).
